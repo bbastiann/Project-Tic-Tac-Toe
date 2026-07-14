@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+
+.player-header {
+    display: flex;
+    gap: 40px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.game-board button {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.game-board button:disabled {
+    cursor: not-allowed;
+    background-color: #f0f0f0;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid black;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup.visible {
+    display: block;
+}
